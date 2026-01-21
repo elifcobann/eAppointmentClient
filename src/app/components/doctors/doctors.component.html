@@ -40,10 +40,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Elif Coban</td>
-                    <td>Acil</td>
+                @for (doctor of doctors; track doctor.id) {
+                    <tr>
+                    <td>{{$index}}</td>
+                    <td>{{doctor.fullName}}</td>
+                    <td>{{doctor.department}}</td>
                     <td>
                         <button class="btn btn-sm btn-outline-primary me-1" title="Update">
                             <i class="fa-solid fa-edit"></i>
@@ -53,6 +54,8 @@
                         </button>
                     </td>
                 </tr>
+                }
+                
             </tbody>
         </table>
     </div>
